@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sign_up.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_sign_up.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_onboarding_one.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_onboarding_one.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_welcome.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_welcome.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_restaurant.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_restaurant.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\dialog_edit_info.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\dialog_edit_info.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_sign_in.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_sign_in.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\restaurant_item.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\restaurant_item.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_onboarding_two.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_onboarding_two.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_profile.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_profile.xml"
+    },
+    {
+        "merged": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\build\\intermediates\\incremental\\mergeDebugResources\\stripped.dir\\layout\\activity_onboarding_three.xml",
+        "source": "C:\\Users\\RTA112020\\Desktop\\Week4\\ANDROID\\app\\src\\main\\res\\layout\\activity_onboarding_three.xml"
+    }
+]

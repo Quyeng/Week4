@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.thesis.android_challenge_w3"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="23"
+        android:targetSdkVersion="30" />
+
+    <application
+        android:allowBackup="true"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="TEAM 10"
+        android:roundIcon="@mipmap/ic_app_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.AndroidChallengeW3" >
+        <activity android:name="com.example.team10.restaurant.RestaurantActivity" />
+        <activity
+            android:name="com.example.team10.activity.splash.SplashActivity"
+            android:noHistory="true"
+            android:theme="@style/SplashTheme" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.example.team10.activity.boarding.BoardingOneActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="com.example.team10.activity.boarding.BoardingTwoActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="com.example.team10.activity.boarding.BoardingThreeActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="com.example.team10.activity.welcome.WelcomeActivity"
+            android:noHistory="true" />
+        <activity
+            android:name="com.example.team10.activity.signup.SignUpActivity"
+            android:noHistory="true" />
+        <activity android:name="com.example.team10.activity.signin.SignInActivity" />
+        <activity android:name="com.example.team10.activity.profile.ProfileActivity" />
+
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:authorities="com.thesis.android_challenge_w3.com.squareup.picasso"
+            android:exported="false" />
+    </application>
+
+</manifest>
