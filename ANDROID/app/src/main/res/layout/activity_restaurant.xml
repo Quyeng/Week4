@@ -13,6 +13,9 @@
         tools:context=".restaurant.RestaurantActivity">
 
         <androidx.recyclerview.widget.RecyclerView
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+
+            android:id="@+id/RestaurantList"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             tools:layout_editor_absoluteX="158dp"

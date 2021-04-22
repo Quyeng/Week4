@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.team10.R
+import com.squareup.picasso.Picasso
 
 class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
 
@@ -29,17 +30,19 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val item = data[position]
-        holder.tvResname=item.res_name
-        holder.tvResAddr=item.address
-        holder.imgRes.setImageResource(item.avatar)
+        holder.tvResname.text=item.res_name
+        holder.tvResAddr.text=item.address
+        Picasso.get().load(item.avatar).into(holder.imgRes)
 
     }
 
     class ViewHolder(val itemView: View) : RecyclerView.ViewHolder(itemView) {
-        //val tvResname=itemView.findViewById<TextView>(R.id.tvres_name)
-        var tvResname: TextView = itemView.findViewById(R.id.tvres_name)
-        var tvResAddr: TextView = itemView.findViewById(R.id.tvaddress)
-        var imgRes: ImageView = itemView.findViewById(R.id.restaurant_image)
+        val tvResname=itemView.findViewById<TextView>(R.id.tvres_name)
+        //var tvResname: TextView = itemView.findViewById(R.id.tvres_name)
+        val tvResAddr=itemView.findViewById<TextView>(R.id.tvaddress)
+        //val imgRes=itemView.findViewById<TextView>(R.id.restaurant_image)
+        //var tvResAddr: TextView = itemView.findViewById(R.id.tvaddress)
+        val imgRes  = itemView.findViewById<ImageView>(R.id.restaurant_image)!!
     }
 
     companion object {

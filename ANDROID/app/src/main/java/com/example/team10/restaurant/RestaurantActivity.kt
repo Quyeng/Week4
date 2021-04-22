@@ -19,9 +19,10 @@ class RestaurantActivity : AppCompatActivity() {
 
         viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
         binding = DataBindingUtil.setContentView(this,R.layout.activity_restaurant)
-        val adapter=RestaurantAdapter
-        binding.rcList.adapter=adapter
-        adapter.data= getdataSet()
+
+        val adapter = RestaurantAdapter()
+        binding.RestaurantList.adapter = adapter
+        adapter.data = getdataSet()
 
 
     }
