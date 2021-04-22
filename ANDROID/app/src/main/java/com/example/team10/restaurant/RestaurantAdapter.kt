@@ -35,10 +35,25 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>(){
 
     }
 
-   class ViewHolder(public val itemView: View): RecyclerView.ViewHolder(itemView){
-       
+   class ViewHolder(val itemView: View): RecyclerView.ViewHolder(itemView){
+        val tvRestaurantName: TextView = itemView.findViewById(R.id.tvres_name)
+        val tvRestaurantAddress: TextView = itemView.findViewById(R.id.tvaddress)
+        val imgRestaurant: ImageView = itemView.findViewById(R.id.restaurant_image)
    }
 
+    companion object {
+        fun from(parent: ViewGroup) : ViewHolder {
+            var layoutInflater = LayoutInflater.from(parent.context)
+            var view = layoutInflater.inflate(R.layout.restaurant_item, parent, false)
+            return ViewHolder(view)
+        }
+    }
 
+    fun bind(item: Restaurant, listener: RestaurantAdapterListener?) {
+        tvRestaurantName.text = item.res_name
+        tvRestaurantAddress.text = item.address
+        restaurant_image.setImageResource(item.avatar)
+            itemView.setOnClickListener {
+            listener?.onClickItem(item)
 
 }
