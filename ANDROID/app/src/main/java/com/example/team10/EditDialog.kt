@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import androidx.databinding.DataBindingUtil
 import com.example.team10.databinding.DialogEditInfoBinding
 
-
+//tao doi so cho Dialog
 class EditDialog(context: Context, private val title: String, private val hint: String, private val initData:String) :
     AlertDialog(context) {
     private lateinit var binding: DialogEditInfoBinding

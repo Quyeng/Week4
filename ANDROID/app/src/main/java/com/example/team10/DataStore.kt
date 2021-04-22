@@ -5,12 +5,13 @@ import java.util.regex.Pattern
 
 class DataStore private constructor() {
     private val userList = ArrayList<User>()
+    //tao call back
     private lateinit var loginCallback: LoginCallback
     private lateinit var signUpCallback: SignUpCallback
 
     companion object {
         val instance = DataStore()
-
+        //tao voi hang so
         const val FULL_NAME_FIELD = 0
         const val EMAIL_FIELD = 1
         const val PHONE_NUMBER_FIELD = 2
@@ -19,6 +20,7 @@ class DataStore private constructor() {
 
 
     fun signUp(fullName: String, email: String, password: String) {
+        //set dieu kien khi de trong tt
         if (fullName.isEmpty() || email.isEmpty() || password.isEmpty()) {
             signUpCallback.onFailed("Field cannot empty")
         } else if (checkEmail(email)){
@@ -57,7 +59,7 @@ class DataStore private constructor() {
         }
         return null
     }
-
+    //gan gia tri cho user
     fun editUser(email: String, field: Int, value: String) {
         for (user in userList) {
             if (user.email == email) {
@@ -75,12 +77,12 @@ class DataStore private constructor() {
             }
         }
     }
-
+    //set dieu kien cho Email
     private fun checkEmail(email: String): Boolean {
         val matcher: Matcher = Pattern.compile("[a-zA-Z0-9\\+\\.\\_\\%\\-\\+]{1,256}" + "\\@gmail.com").matcher(email)
         return !matcher.matches()
     }
-
+    //set dieu kien cho password
     private fun checkPassword(password: String): Boolean{
         val matcher: Matcher =
             Pattern.compile("((?=.*[0-9])(?=.*[A-Z])(?=.*[a-z])(?=.*[!@#\$%^&*()]).{8,})").matcher(
@@ -88,7 +90,7 @@ class DataStore private constructor() {
             )
         return !matcher.matches()
     }
-
+    //override va tao interface
     fun setSignUpCallback(signUpCallback: SignUpCallback) {
         this.signUpCallback = signUpCallback
     }

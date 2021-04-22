@@ -38,7 +38,7 @@ class ProfileActivity : AppCompatActivity() {
                 viewModel.setupUserProfile(user.email)
 
             }
-
+    //set nhan chinh sua Dialog
             tvFullName.setOnClickListener {
                 setupAlertDialog("Edit Full Name", "Enter your full name",tvFullName.text.toString(),object:EditDialog.EditDialogCallback {
                     override fun onConfirmClicked(data: String) {
@@ -76,7 +76,7 @@ class ProfileActivity : AppCompatActivity() {
     }
 
 
-
+    //tao setupAlert cho Dialog
     private fun setupAlertDialog(title: String, textHint: String,initData:String,editDialogCallback: EditDialog.EditDialogCallback) {
         val dialog = EditDialog(this,title,textHint,initData)
         dialog.setEditDialogCallback(editDialogCallback)
