@@ -1,7 +1,6 @@
 package com.example.team10.restaurant
-import com.example.team10.restaurant.Restaurant
 
-    //class DataStore {
+
         fun getdataSet(): List<Restaurant> {
             return listOf(
                 Restaurant(

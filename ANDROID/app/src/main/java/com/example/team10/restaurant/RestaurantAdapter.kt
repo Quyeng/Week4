@@ -17,10 +17,17 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
             field = value
             notifyDataSetChanged()
         }
+    //tao hang so de chuyen View
+    val LIST_ITEM : Int = 0
+    val GRID_ITEM : Int = 1
+    var isSwitch : Boolean = true
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var layoutInflater = LayoutInflater.from(parent.context)
-        var view = layoutInflater.inflate(R.layout.restaurant_item, parent, false)
+        var view : View
+        if(viewType == LIST_ITEM)
+            view = layoutInflater.inflate(R.layout.linear, parent, false)
+        else
+            view = layoutInflater.inflate(R.layout.grid, parent, false)
         return ViewHolder(view)
     }
 
@@ -42,7 +49,7 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
         val tvResAddr=itemView.findViewById<TextView>(R.id.tvaddress)
         //val imgRes=itemView.findViewById<TextView>(R.id.restaurant_image)
         //var tvResAddr: TextView = itemView.findViewById(R.id.tvaddress)
-        val imgRes  = itemView.findViewById<ImageView>(R.id.restaurant_image)!!
+        val imgRes = itemView.findViewById<ImageView>(R.id.restaurant_image)!!
     }
 
     companion object {
@@ -52,6 +59,19 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
             return ViewHolder(view)
         }
     }
+    override fun getItemViewType(position: Int): Int {
+        if (isSwitch){
+            return LIST_ITEM;
+        }else{
+            return GRID_ITEM;
+        }
+    }
+    fun switchItemView() : Boolean
+    {
+        isSwitch = !isSwitch
+        return isSwitch
+    }
+
 
     /*fun bind(restaurant: Restaurant, listener: RestaurantAdapterListener?) {
         tvResname.text = restaurant.res_name

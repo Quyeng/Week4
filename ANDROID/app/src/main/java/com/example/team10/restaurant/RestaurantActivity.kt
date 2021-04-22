@@ -4,10 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
+import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.team10.R
 import com.example.team10.databinding.ActivityRestaurantBinding
-import com.example.team10.restaurant.RestaurantViewModel
-
+import kotlinx.android.synthetic.main.activity_restaurant.*
 
 
 class RestaurantActivity : AppCompatActivity() {
@@ -23,6 +24,17 @@ class RestaurantActivity : AppCompatActivity() {
         val adapter = RestaurantAdapter()
         binding.RestaurantList.adapter = adapter
         adapter.data = getdataSet()
+
+        btn_switch.setOnClickListener {
+            adapter.switchItemView()
+            if(adapter.switchItemView()) {
+                RestaurantList.layoutManager = GridLayoutManager(this, 2)
+            }
+            else {
+                RestaurantList.layoutManager = LinearLayoutManager(this)
+            }
+            adapter.switchItemView()
+            adapter.notifyDataSetChanged()
 
 
     }
