@@ -18,16 +18,18 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
             notifyDataSetChanged()
         }
     //tao hang so de chuyen View
-    val LIST_ITEM : Int = 0
-    val GRID_ITEM : Int = 1
-    var isSwitch : Boolean = true
+    val LISTVIEW : Int = 0
+    val GRIDVIEW: Int = 1
+    var choose : Boolean = true
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
-        var view : View
-        if(viewType == LIST_ITEM)
-            view = layoutInflater.inflate(R.layout.linear, parent, false)
-        else
-            view = layoutInflater.inflate(R.layout.grid, parent, false)
+        val inflater = LayoutInflater.from(parent.context)
+        val view : View
+        view = if(viewType == LISTVIEW) {
+            inflater.inflate(R.layout.restaurant_item, parent, false)
+        } else  {
+            inflater.inflate(R.layout.grid_restaurant, parent, false)
+        }
         return ViewHolder(view)
     }
 
@@ -60,16 +62,16 @@ class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
         }
     }
     override fun getItemViewType(position: Int): Int {
-        if (isSwitch){
-            return LIST_ITEM;
+        if (choose){
+            return LISTVIEW;
         }else{
-            return GRID_ITEM;
+            return GRIDVIEW;
         }
     }
-    fun switchItemView() : Boolean
+    fun switchView() : Boolean
     {
-        isSwitch = !isSwitch
-        return isSwitch
+        choose = !choose
+        return choose
     }
 
 
