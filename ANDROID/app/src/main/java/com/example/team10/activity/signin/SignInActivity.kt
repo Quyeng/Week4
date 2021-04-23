@@ -14,6 +14,7 @@ import com.example.team10.User
 import com.example.team10.activity.profile.ProfileActivity
 import com.example.team10.activity.signup.SignUpActivity
 import com.example.team10.databinding.ActivitySignInBinding
+import com.example.team10.restaurant.RestaurantActivity
 
 
 class SignInActivity : AppCompatActivity() {
@@ -73,7 +74,7 @@ class SignInActivity : AppCompatActivity() {
     private fun startProfileActivity(user: User) {
         val bundle = Bundle()
         bundle.putParcelable(USER_KEY, user)
-        val intent = Intent(this@SignInActivity, ProfileActivity::class.java)
+        val intent = Intent(this@SignInActivity, RestaurantActivity::class.java)
         intent.putExtras(bundle)
         startActivity(intent)
     }
