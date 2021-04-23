@@ -8,7 +8,7 @@
     android:layout_margin="5dp">
 
     <ImageView
-        android:id="@+id/restaurantPic"
+        android:id="@+id/restaurant_image"
         android:layout_width="177dp"
         android:layout_height="166dp"
         android:layout_marginTop="4dp"
@@ -19,7 +19,7 @@
         tools:srcCompat="@tools:sample/avatars" />
 
     <TextView
-        android:id="@+id/restaurantName"
+        android:id="@+id/tvres_name"
         android:layout_width="173dp"
         android:layout_height="34dp"
         android:layout_marginTop="8dp"
@@ -27,10 +27,10 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantPic" />
+        app:layout_constraintTop_toBottomOf="@+id/restaurant_image" />
 
     <TextView
-        android:id="@+id/restaurantAddress"
+        android:id="@+id/tvaddress"
         android:layout_width="173dp"
         android:layout_height="34dp"
         android:layout_marginTop="8dp"
@@ -38,5 +38,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.033"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/restaurantName" />
+        app:layout_constraintTop_toBottomOf="@+id/tvres_name" />
 </androidx.constraintlayout.widget.ConstraintLayout>
