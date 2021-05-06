@@ -1,4 +1,6 @@
-package com.example.team10.restaurant
+package com.example.team10.restaurant.data
+
+import com.example.team10.restaurant.models.Restaurant
 
 
 fun getdataSet(): List<Restaurant> {

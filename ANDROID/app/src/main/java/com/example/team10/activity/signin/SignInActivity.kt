@@ -2,7 +2,6 @@ package com.example.team10.activity.signin
 
 import android.content.Intent
 import android.os.Bundle
-import android.util.Log
 import android.view.WindowManager
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -11,10 +10,9 @@ import androidx.lifecycle.Observer
 import androidx.lifecycle.ViewModelProvider
 import com.example.team10.R
 import com.example.team10.User
-import com.example.team10.activity.profile.ProfileActivity
 import com.example.team10.activity.signup.SignUpActivity
 import com.example.team10.databinding.ActivitySignInBinding
-import com.example.team10.restaurant.RestaurantActivity
+import com.example.team10.restaurant.ui.RestaurantActivity
 
 
 class SignInActivity : AppCompatActivity() {

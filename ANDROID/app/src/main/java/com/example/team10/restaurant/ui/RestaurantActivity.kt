@@ -1,14 +1,19 @@
-package com.example.team10.restaurant
+package com.example.team10.restaurant.ui
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.databinding.DataBindingUtil
+import androidx.fragment.app.commit
 import androidx.lifecycle.ViewModelProvider
 import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.example.team10.R
 import com.example.team10.databinding.ActivityRestaurantBinding
+import com.example.team10.restaurant.RestaurantViewModel
+import com.example.team10.restaurant.data.getdataSet
+import com.example.team10.restaurant.ui.fragments.RestaurantFragment
 import kotlinx.android.synthetic.main.activity_restaurant.*
+import androidx.fragment.app.add
 
 
 class RestaurantActivity : AppCompatActivity() {
@@ -17,25 +22,20 @@ class RestaurantActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
 
         super.onCreate(savedInstanceState)
+        setContentView(R.layout.activity_restaurant)
+        supportFragmentManager.commit {
+            setReorderingAllowed(true)
 
-        viewModel = ViewModelProvider(this).get(RestaurantViewModel::class.java)
-        binding = DataBindingUtil.setContentView(this, R.layout.activity_restaurant)
-
-        val adapter = RestaurantAdapter()
-        binding.RestaurantList.adapter = adapter
-        adapter.data = getdataSet()
+            add<RestaurantFragment>(R.id.frag_container_restaurant)
+//        val transaction = supportFragmentManager.beginTransaction()
+//        transaction.replace(R.id.frag_container_retaurant,BlankFragment())
+//        transaction.addToBackStack(null)
+//        transaction.commit()
+        }
 
         //stackoverflow
-        btn_switch.setOnClickListener {
-            adapter.switchView()
-            if (adapter.switchView()) {
-                RestaurantList.layoutManager = GridLayoutManager(this, 2)
-            } else {
-                RestaurantList.layoutManager = LinearLayoutManager(this)
-            }
-            adapter.switchView()
-            adapter.notifyDataSetChanged()
 
-        }
+
     }
+
 }

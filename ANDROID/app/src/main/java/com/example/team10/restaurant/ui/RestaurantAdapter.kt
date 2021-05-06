@@ -1,4 +1,4 @@
-package com.example.team10.restaurant
+package com.example.team10.restaurant.ui
 
 
 import android.view.LayoutInflater
@@ -8,6 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import com.example.team10.R
+import com.example.team10.restaurant.models.Restaurant
 import com.squareup.picasso.Picasso
 
 class RestaurantAdapter : RecyclerView.Adapter<RestaurantAdapter.ViewHolder>() {
